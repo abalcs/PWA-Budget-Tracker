@@ -44,7 +44,7 @@ e.waitUntil(
     })
 );
 
-self.ClientRectList.claim();
+// self.ClientRectList.claim();
 });
 
 self.addEventListener('fetch', function(evt) {
