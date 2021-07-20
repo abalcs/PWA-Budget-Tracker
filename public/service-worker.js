@@ -21,7 +21,7 @@ const FILES_TO_CACHE = [
 //install
 self.addEventListener('install', function (e) {
     e.waitUntil(
-        caches.open(DATA_CACHE_NAME).then((cache) => cache.add('/api/images'))
+        caches.open(DATA_CACHE_NAME).then((cache) => cache.add('/api/transaction'))
     );
     e.waitUntil(
         caches.open(CACHE_NAME).then((cache) => cache.addAll(FILES_TO_CACHE))
@@ -54,5 +54,5 @@ evt.respondWith(
             return response || fetch(evt.request);
             });
         })
-    );
+    ); 
 });
